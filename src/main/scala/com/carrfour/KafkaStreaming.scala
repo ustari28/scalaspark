@@ -19,6 +19,7 @@ object KafkaStreaming {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("kafkastreaming").setMaster("local[*]")
     val ssc = new StreamingContext(conf, Seconds(5))
+    val fff = 'Xfff
     val params: Map[String, String] = Map(
       "metadata.broker.list" -> "localhost:9092",
       "zookeeper.connect" -> "localhost:2181",
